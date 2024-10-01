@@ -36,9 +36,6 @@ export const SkillsAndTechnologies: React.FC = () => {
             key={skill.name}
             className="group flex items-center p-3 bg-slate-800/50 border border-slate-700 rounded-lg shadow-md hover:border-gold-600/50 relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-gold-600/20"
           >
-            {/* Effet de reflet doré persistant */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-gold-400/30 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:animate-golden-shine-persistent" />
-            
             {/* Effet de reflet doré animé */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
 
