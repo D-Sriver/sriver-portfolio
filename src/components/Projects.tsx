@@ -12,9 +12,12 @@ export const Projects: React.FC = () => (
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
-          <motion.div 
+          <motion.a 
             key={project.title}
-            className="group bg-slate-800/10 border border-gold-600/50 p-6 rounded-xl shadow-md relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-gold-600/20"
+            href={project.github}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group bg-slate-800/10 border border-gold-600/50 p-6 rounded-xl shadow-md relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-gold-600/20 cursor-pointer"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.02 }}
@@ -27,17 +30,10 @@ export const Projects: React.FC = () => (
             <p className="text-foreground/60 text-sm mb-8 relative z-10">
               <span className="font-semibold">Technologies:</span> {project.technologies}
             </p>
-            {project.github && (
-              <a 
-                href={project.github} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="absolute bottom-4 right-4 text-foreground/60 hover:text-gold-400 transition-colors z-10"
-              >
-                <Icon icon="mdi:github" width="32" height="32" />
-              </a>
-            )}
-          </motion.div>
+            <div className="absolute bottom-4 right-4 text-foreground/60 group-hover:text-gold-400 transition-colors z-10">
+              <Icon icon="mdi:github" width="32" height="32" />
+            </div>
+          </motion.a>
         ))}
       </div>
     </motion.div>

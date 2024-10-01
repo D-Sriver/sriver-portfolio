@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-import { GlassmorphicCard } from './GlassmorphicCard';
 
 export const Header: React.FC = () => (
-  <GlassmorphicCard className=" py-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80">
+  <div className="py-6 backdrop-blur-sm">
     <motion.h1 
       className="text-7xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-700"
       initial={{ opacity: 0, y: -50 }}
@@ -25,5 +24,5 @@ export const Header: React.FC = () => (
     >
       Développeur Front-end React & Graphiste Publicitaire
     </motion.p>
-  </GlassmorphicCard>
+  </div>
 )
