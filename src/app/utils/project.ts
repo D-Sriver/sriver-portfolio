@@ -10,7 +10,7 @@ export const projects: Project[] = [
     title: 'Projet d\'automatisation en Node de création de site en React depuis le terminal', 
     description: 'Un outil en ligne de commande pour générer des applications React.',
     technologies: 'Node.js, React, CLI',
-    github: 'https://github.com/votre-username/projet-automatisation-react'
+    github: 'https://github.com/D-Sriver/reactcreator'
   },
   { 
     title: 'Site utilisant TreeJS', 
