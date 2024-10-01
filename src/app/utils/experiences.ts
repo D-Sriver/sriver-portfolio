@@ -1,20 +1,14 @@
 export const experiences = [
   {
-    company: 'TechCorp Inc.',
-    position: 'Senior React Developer',
-    period: 'Jan 2021 - Present',
-    description: 'Lead front-end development for multiple high-traffic web applications. Implemented performance optimizations resulting in 40% faster load times.'
-  },
-  {
-    company: 'WebSolutions LLC',
-    position: 'React Developer',
-    period: 'Mar 2019 - Dec 2020',
+    company: 'Le jeu facétieux',
+    position: 'Stage développeur web',
+    period: 'juin 2023 - septembre 2023',
     description: 'Developed and maintained various React-based projects. Collaborated with UX/UI designers to implement pixel-perfect, responsive designs.'
   },
   {
-    company: 'StartupXYZ',
-    position: 'Junior Front-end Developer',
-    period: 'Jun 2018 - Feb 2019',
-    description: 'Assisted in building interactive user interfaces using React and jQuery. Gained experience in agile development methodologies.'
+    company: 'Sriver@art',
+    position: 'Freelance graphiste publicitaire',
+    period: '2010-2018',
+    description: 'Réalisation de projet , charte graphique, Bannière, Logo YouTube, Discord sur plateforme freelance'
   },
 ]

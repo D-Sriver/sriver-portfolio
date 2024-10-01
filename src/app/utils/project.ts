@@ -1,22 +1,17 @@
 export const projects = [
   { 
-    title: 'E-commerce Dashboard', 
-    description: 'A responsive admin dashboard for an e-commerce platform.',
-    technologies: 'React, Redux, Material-UI, Chart.js'
+    title: 'Projet d\'automatisation en Node de création de site en React depuis le terminal', 
+    description: 'Un outil en ligne de commande pour générer des applications React.',
+    technologies: 'Node.js, React, CLI'
   },
   { 
-    title: 'Social Media App', 
-    description: 'A full-featured social media application with real-time updates.',
-    technologies: 'React, Firebase, Styled Components, Redux-Saga'
+    title: 'Site utilisant TreeJS', 
+    description: 'Un site web interactif utilisant la bibliothèque TreeJS pour la visualisation de données.',
+    technologies: 'React, TreeJS, D3.js'
   },
   { 
-    title: 'Weather Forecast SPA', 
-    description: 'A single-page application showing weather forecasts using external APIs.',
-    technologies: 'React, TypeScript, Axios, React Query'
-  },
-  { 
-    title: 'Task Management Tool', 
-    description: 'A Kanban-style task management application with drag-and-drop functionality.',
-    technologies: 'React, Redux Toolkit, React Beautiful DnD, Tailwind CSS'
+    title: 'Tous les projets OpenClassrooms', 
+    description: 'Tous les projets réalisés cette année sur la plateforme OpenClassrooms.',
+    technologies: 'React, Node.js, Styled Components, Redux, TypeScript, Axios, Redux, Scss, Tailwind CSS'
   },
 ]
