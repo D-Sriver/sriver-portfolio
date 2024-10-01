@@ -42,17 +42,25 @@ export function ReactDeveloperPortfolioComponent() {
         <Header />
 
         <nav className="my-12 relative" ref={navRef}>
-          <div className="flex justify-around items-center bg-gray-/20 rounded-full p-1">
+          <div className="flex justify-around items-center rounded-full p-1">
             {sections.map((section) => (
               <button
                 key={section}
                 data-section={section}
                 onClick={() => setActiveSection(section)}
-                className={`relative z-10 px-4 py-2 rounded-full w-32 border border-gold-600/50 transition-colors hover:border-gold-500/50 ${
-                  activeSection === section ? 'text-gray-900' : 'text-gray-300 hover:text-white'
-                }`}
+                className="relative z-10 px-4 py-2 rounded-full w-32 border border-gold-600/50 transition-colors hover:border-gold-500/50 overflow-hidden group"
               >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {/* Effet de reflet doré persistant */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                
+                {/* Effet de reflet doré animé */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
+                
+                <span className={`relative z-10 ${
+                  activeSection === section ? 'text-gray-900' : 'text-gray-300 group-hover:text-white'
+                }`}>
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </span>
               </button>
             ))}
             <motion.div
@@ -81,7 +89,7 @@ export function ReactDeveloperPortfolioComponent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gold-600/50"
+            className="bg-gradient-to-br from-gray-900/10 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gold-600/50"
           >
             {activeSection === 'aboutMe' && <AboutMe />}
             {activeSection === 'skills' && <SkillsAndTechnologies />}

@@ -19,6 +19,40 @@ module.exports = {
           900: '#936c3e',
         },
       },
+      keyframes: {
+        shine: {
+          '100%': { left: '125%' },
+        },
+        'golden-shine': {
+          '0%': { left: '-100%' },
+          '100%': { left: '200%' },
+        },
+        'golden-shine-once': {
+          '0%': { left: '-100%', opacity: '0.7' },
+          '100%': { left: '100%', opacity: '0' },
+        },
+        'border-shine': {
+          '0%': { left: '-100%' },
+          '50%': { left: '100%' },
+          '100%': { left: '100%' },
+        },
+        'border-flow': {
+          '0%, 100%': { transform: 'translateX(-100%)' },
+          '50%': { transform: 'translateX(100%)' },
+        },
+        'golden-shine-persistent': {
+          '0%': { left: '-100%', opacity: '0' },
+          '100%': { left: '70%', opacity: '0.3' },
+        },
+      },
+      animation: {
+        shine: 'shine 1s',
+        'golden-shine': 'golden-shine 2s ease-in-out infinite',
+        'golden-shine-once': 'golden-shine-once 1.5s ease-in-out forwards',
+        'border-shine': 'border-shine 2s ease-in-out',
+        'border-flow': 'border-flow 3s ease-in-out infinite',
+        'golden-shine-persistent': 'golden-shine-persistent 1.5s ease-in-out forwards',
+      },
     },
   },
   plugins: [],
