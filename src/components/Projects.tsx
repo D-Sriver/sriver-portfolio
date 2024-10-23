@@ -4,20 +4,17 @@ import { projects } from '../app/utils/project';
 
 export const Projects: React.FC = () => (
   <>
-    <h2 className="text-3xl font-bold mb-6 text-primary">Projets</h2>
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-primary">Projets</h2>
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6">
         {projects.map((project) => (
-          <motion.a 
+          <motion.div 
             key={project.title}
-            href={project.github}
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="group bg-slate-800/10 border border-gold-600/50 p-6 rounded-xl shadow-md relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-gold-600/20 cursor-pointer"
+            className="group bg-slate-800/10 border border-gold-600/50 p-3 sm:p-4 rounded-xl shadow-md relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-gold-600/20"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.02 }}
@@ -30,10 +27,19 @@ export const Projects: React.FC = () => (
             <p className="text-foreground/60 text-sm mb-8 relative z-10">
               <span className="font-semibold">Technologies:</span> {project.technologies}
             </p>
-            <div className="absolute bottom-4 right-4 text-foreground/60 group-hover:text-gold-400 transition-colors z-10">
-              <Icon icon="mdi:github" width="32" height="32" />
+            <div className="flex mt-4 space-x-4">
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gold-400 hover:text-gold-300 transition-colors">
+                  <Icon icon="mdi:github" width="24" height="24" />
+                </a>
+              )}
+              {project.liveUrl && (
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-gold-400 hover:text-gold-300 transition-colors">
+                  <Icon icon="mdi:web" width="24" height="24" />
+                </a>
+              )}
             </div>
-          </motion.a>
+          </motion.div>
         ))}
       </div>
     </motion.div>

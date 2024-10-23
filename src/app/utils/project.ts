@@ -3,6 +3,7 @@ export interface Project {
   description: string;
   technologies: string;
   github?: string;
+  liveUrl?: string; // Nouveau champ pour l'URL du projet en ligne
 }
 
 export const projects: Project[] = [
@@ -14,14 +15,22 @@ export const projects: Project[] = [
   },
   { 
     title: 'Site utilisant TreeJS', 
-    description: 'Un site web interactif utilisant la bibliothèque TreeJS pour la visualisation de données.',
-    technologies: 'React, TreeJS, D3.js',
-    github: 'https://github.com/votre-username/projet-treejs'
+    description: 'Un jeu isomérique interactif en treeJS',
+    technologies: 'React, TreeJS, TypeScript',
+    github: 'https://github.com/D-Sriver/HunterRemix',
+    liveUrl: 'https://hunter-remix.vercel.app/' // URL fictive, à remplacer par la vraie
   },
-  { 
-    title: 'Tous les projets OpenClassrooms', 
-    description: 'Tous les projets réalisés cette année sur la plateforme OpenClassrooms.',
-    technologies: 'React, Node.js, Styled Components, Redux, TypeScript, Axios, Redux, Scss, Tailwind CSS',
-    github: 'https://github.com/votre-username/projets-openclassrooms'
+  {
+    title: 'Test de projet Strapi',
+    description: 'Un site de test Strapi en suivant un tutoriel.',
+    technologies: 'React, Redux, TypeScript, Tailwind CSS, Strapi',
+    github: 'https://github.com/D-Sriver/zds-news',
   },
+  {
+    title: 'Site d\'aide à la configuration de projet web',
+    description: 'Un site pour aider à la configuration de projet web.',
+    technologies: 'React, Redux, TypeScript, Tailwind CSS',
+    github: 'https://github.com/D-Sriver/create-easy-web',
+    liveUrl: 'https://create-easy-web.vercel.app/' // URL fictive, à remplacer par la vraie
+  }
 ]

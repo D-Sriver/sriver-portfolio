@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion';
+import { Icon } from '@iconify/react'; // Assurez-vous d'avoir installé @iconify/react
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { AboutMe } from './AboutMe';
 import { AnimatedBackground } from './AnimatedBackground';
@@ -10,13 +11,19 @@ import { Header } from './Header';
 import { Projects } from './Projects';
 import { SkillsAndTechnologies } from './SkillsAndTechnologies';
 
-const sections = ['aboutMe', 'skills', 'experience', 'projects'] as const;
-type Section = typeof sections[number];
+const sections = [
+  { key: 'aPropos', label: 'À propos' },
+  { key: 'competences', label: 'Compétences' },
+  { key: 'experience', label: 'Expérience' },
+  { key: 'projets', label: 'Projets' }
+] as const;
+type Section = typeof sections[number]['key'];
 
 export function ReactDeveloperPortfolioComponent() {
-  const [activeSection, setActiveSection] = useState<Section>('aboutMe');
+  const [activeSection, setActiveSection] = useState<Section>('aPropos');
   const [dropPosition, setDropPosition] = useState({ left: 0, width: 0 });
   const navRef = useRef<HTMLDivElement>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateDropPosition = () => {
@@ -38,17 +45,54 @@ export function ReactDeveloperPortfolioComponent() {
   return (
     <div className="min-h-screen flex flex-col text-gray-100 relative overflow-hidden">
       <AnimatedBackground />
-      <div className="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+      <div className="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 relative z-10">
         <Header />
 
-        <nav className="my-12 relative" ref={navRef}>
+        {/* Navigation pour mobile */}
+        <div className="md:hidden fixed top-4 right-4 z-50">
+          <motion.button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 rounded-lg bg-gold-600/20 text-gold-400 hover:bg-gold-600/30 transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Icon icon={isMobileMenuOpen ? "mdi:close" : "mdi:menu"} width="24" height="24" />
+          </motion.button>
+        </div>
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="fixed top-4 right-4 left-4 bg-gray-800/40 border border-gold-600/50 backdrop-blur-md rounded-md shadow-lg overflow-hidden z-40"
+            >
+              {sections.map(({ key, label }) => (
+                <motion.button
+                  key={key}
+                  onClick={() => {
+                    setActiveSection(key);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="block w-full text-left px-4 py-3 hover:bg-gold-700/30 transition-colors duration-200 hover:transition-all "
+                >
+                  {label}
+                </motion.button>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Navigation pour desktop */}
+        <nav className="my-8 sm:my-12 relative hidden md:block" ref={navRef}>
           <div className="flex justify-around items-center rounded-full p-1">
-            {sections.map((section) => (
+            {sections.map(({ key, label }) => (
               <button
-                key={section}
-                data-section={section}
-                onClick={() => setActiveSection(section)}
-                className="relative z-10 px-4 py-2 rounded-full w-32 border border-gold-600/50 transition-colors hover:border-gold-500/50 overflow-hidden group"
+                key={key}
+                data-section={key}
+                onClick={() => setActiveSection(key)}
+                className="relative z-10 px-4 py-2 rounded-full w-32 border-2 border-gold-600/50 transition-colors hover:border-gold-500/50 overflow-hidden group"
               >
                 {/* Effet de reflet doré persistant */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
@@ -57,9 +101,9 @@ export function ReactDeveloperPortfolioComponent() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
                 
                 <span className={`relative z-10 ${
-                  activeSection === section ? 'text-gray-900' : 'text-gray-300 group-hover:text-white'
+                  activeSection === key ? 'text-gray-900' : 'text-gray-300 group-hover:text-white'
                 }`}>
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                  {label}
                 </span>
               </button>
             ))}
@@ -83,18 +127,18 @@ export function ReactDeveloperPortfolioComponent() {
           </div>
         </nav>
 
-        <main className="flex-grow">
+        <main className={`flex-grow transition-all duration-300 ${isMobileMenuOpen ? 'blur-sm' : ''}`}>
           <motion.div
             key={activeSection}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="bg-gradient-to-br from-gray-900/10 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gold-600/50"
+            className="bg-gradient-to-br from-gray-900/10 backdrop-blur-sm rounded-xl shadow-lg p-4 sm:p-6 border border-gold-600/50"
           >
-            {activeSection === 'aboutMe' && <AboutMe />}
-            {activeSection === 'skills' && <SkillsAndTechnologies />}
+            {activeSection === 'aPropos' && <AboutMe />}
+            {activeSection === 'competences' && <SkillsAndTechnologies />}
             {activeSection === 'experience' && <Experience />}
-            {activeSection === 'projects' && <Projects />}
+            {activeSection === 'projets' && <Projects />}
           </motion.div>
         </main>
       </div>
