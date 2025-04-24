@@ -1,5 +1,95 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 /* Ajoutez ici vos styles globaux personnalisés si nécessaire */
+
+@theme {
+  --color-gold-100: #faf0e6;
+  --color-gold-200: #f5e1c7;
+  --color-gold-300: #f0d2a8;
+  --color-gold-400: #ebc389;
+  --color-gold-500: #e6b46a;
+  --color-gold-600: #d1a25f;
+  --color-gold-700: #bd9054;
+  --color-gold-800: #a87e49;
+  --color-gold-900: #936c3e;
+
+  --animate-shine: shine 1s;
+  --animate-golden-shine: golden-shine 2s ease-in-out infinite;
+  --animate-golden-shine-once: golden-shine-once 1.5s ease-in-out forwards;
+  --animate-border-shine: border-shine 2s ease-in-out;
+  --animate-border-flow: border-flow 3s ease-in-out infinite;
+  --animate-golden-shine-persistent: golden-shine-persistent 1.5s ease-in-out
+    forwards;
+
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+  @keyframes golden-shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
+  }
+  @keyframes golden-shine-once {
+    0% {
+      left: -100%;
+      opacity: 0.7;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+  @keyframes border-shine {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  @keyframes border-flow {
+    0%,
+    100% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes golden-shine-persistent {
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+    100% {
+      left: 70%;
+      opacity: 0.3;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}

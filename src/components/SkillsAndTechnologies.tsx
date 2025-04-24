@@ -41,7 +41,7 @@ export const SkillsAndTechnologies: React.FC = () => {
             whileHover={{ scale: 1.05 }}
           >
             {/* Effet de reflet doré animé */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
+            <div className="absolute inset-0 bg-linear-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
 
             <div className="w-10 h-10 sm:w-12 sm:h-12 mr-3 sm:mr-4 flex items-center justify-center relative z-10">
               <Icon 

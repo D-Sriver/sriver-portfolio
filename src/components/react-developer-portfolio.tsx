@@ -45,7 +45,7 @@ export function ReactDeveloperPortfolioComponent() {
   return (
     <div className="min-h-screen flex flex-col text-gray-100 relative overflow-hidden">
       <AnimatedBackground />
-      <div className="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 relative z-10">
+      <div className="grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 relative z-10">
         <Header />
 
         {/* Navigation pour mobile */}
@@ -95,10 +95,10 @@ export function ReactDeveloperPortfolioComponent() {
                 className="relative z-10 px-4 py-2 rounded-full w-32 border-2 border-gold-600/50 transition-colors hover:border-gold-500/50 overflow-hidden group"
               >
                 {/* Effet de reflet doré persistant */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-gold-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
                 
                 {/* Effet de reflet doré animé */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
                 
                 <span className={`relative z-10 ${
                   activeSection === key ? 'text-gray-900' : 'text-gray-300 group-hover:text-white'
@@ -127,13 +127,13 @@ export function ReactDeveloperPortfolioComponent() {
           </div>
         </nav>
 
-        <main className={`flex-grow transition-all duration-300 ${isMobileMenuOpen ? 'blur-sm' : ''}`}>
+        <main className={`grow transition-all duration-300 ${isMobileMenuOpen ? 'blur-xs' : ''}`}>
           <motion.div
             key={activeSection}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="bg-gradient-to-br from-gray-900/10 backdrop-blur-sm rounded-xl shadow-lg p-4 sm:p-6 border border-gold-600/50"
+            className="bg-linear-to-br from-gray-900/10 backdrop-blur-xs rounded-xl shadow-lg p-4 sm:p-6 border border-gold-600/50"
           >
             {activeSection === 'aPropos' && <AboutMe />}
             {activeSection === 'competences' && <SkillsAndTechnologies />}

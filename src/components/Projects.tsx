@@ -20,7 +20,7 @@ export const Projects: React.FC = () => (
             whileHover={{ scale: 1.02 }}
           >
             {/* Effet de reflet doré animé */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
+            <div className="absolute inset-0 bg-linear-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
 
             <h3 className="text-xl font-semibold mb-2 text-primary-light relative z-10 group-hover:text-gold-400 transition-colors duration-300">{project.title}</h3>
             <p className="text-foreground/80 mb-4 relative z-10">{project.description}</p>
