@@ -1,33 +1,54 @@
 export interface Skill {
   name: string;
   icon: string;
-  url: string; // Nouvelle propriété
+  url: string;
 }
 
 export const skillGroups = [
   {
-    name: 'Langages et technologies front-end',
+    name: 'Langages de programmation',
     skills: [
-      { name: 'HTML5', icon: 'logos:html-5', url: 'https://developer.mozilla.org/fr/docs/Web/HTML' },
-      { name: 'CSS3', icon: 'logos:css-3', url: 'https://developer.mozilla.org/fr/docs/Web/CSS' },
       { name: 'JavaScript', icon: 'logos:javascript', url: 'https://developer.mozilla.org/fr/docs/Web/JavaScript' },
       { name: 'TypeScript', icon: 'logos:typescript-icon', url: 'https://www.typescriptlang.org/' },
-      { name: 'Sass', icon: 'logos:sass', url: 'https://sass-lang.com/' },
     ]
   },
   {
-    name: 'Frameworks et bibliothèques',
+    name: 'Technologies front-end',
+    skills: [
+      { name: 'HTML5', icon: 'logos:html-5', url: 'https://developer.mozilla.org/fr/docs/Web/HTML' },
+      { name: 'CSS3', icon: 'logos:css-3', url: 'https://developer.mozilla.org/fr/docs/Web/CSS' },
+      { name: 'Sass', icon: 'logos:sass', url: 'https://sass-lang.com/' },
+      { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon', url: 'https://tailwindcss.com/' },
+      { name: 'Bootstrap', icon: 'logos:bootstrap', url: 'https://getbootstrap.com/' },
+      { name: 'styled-components', icon: 'file-icons:styledcomponents', url: 'https://styled-components.com/' },
+    ]
+  },
+  {
+    name: 'Frameworks et bibliothèques front-end',
     skills: [
       { name: 'React', icon: 'logos:react', url: 'https://reactjs.org/' },
       { name: 'Next.js', icon: 'logos:nextjs-icon', url: 'https://nextjs.org/' },
       { name: 'Redux', icon: 'logos:redux', url: 'https://redux.js.org/' },
       { name: 'React Router', icon: 'logos:react-router', url: 'https://reactrouter.com/' },
       { name: 'Material-UI', icon: 'logos:material-ui', url: 'https://mui.com/' },
-      { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon', url: 'https://tailwindcss.com/' },
-      { name: 'Bootstrap', icon: 'logos:bootstrap', url: 'https://getbootstrap.com/' },
-      { name: 'styled-components', icon: 'file-icons:styledcomponents', url: 'https://styled-components.com/' },
       { name: 'Framer Motion', icon: 'logos:framer', url: 'https://www.framer.com/motion/' },
       { name: 'Axios', icon: 'simple-icons:axios', url: 'https://axios-http.com/' },
+    ]
+  },
+  {
+    name: 'Backend et APIs',
+    skills: [
+      { name: 'Node.js', icon: 'logos:nodejs-icon', url: 'https://nodejs.org/' },
+      { name: 'Postman', icon: 'logos:postman-icon', url: 'https://www.postman.com/' },
+      { name: 'Rapid API', icon: 'logos:rapidapi-icon', url: 'https://rapidapi.com/' },
+      { name: 'Supabase', icon: 'logos:supabase-icon', url: 'https://supabase.com/' },
+    ]
+  },
+  {
+    name: 'CMS et gestion de contenu',
+    skills: [
+      { name: 'Strapi', icon: 'logos:strapi-icon', url: 'https://strapi.io/' },
+      { name: 'WordPress', icon: 'logos:wordpress-icon', url: 'https://wordpress.com/' },
     ]
   },
   {
@@ -41,15 +62,7 @@ export const skillGroups = [
       { name: 'npm', icon: 'logos:npm-icon', url: 'https://www.npmjs.com/' },
       { name: 'yarn', icon: 'logos:yarn', url: 'https://yarnpkg.com/' },
       { name: 'pnpm', icon: 'logos:pnpm', url: 'https://pnpm.io/' },
-    ]
-  },
-  {
-    name: 'Backend, APIs et CMS',
-    skills: [
-      { name: 'Node.js', icon: 'logos:nodejs-icon', url: 'https://nodejs.org/' },
-      { name: 'Postman', icon: 'logos:postman-icon', url: 'https://www.postman.com/' },
-      { name: 'Strapi', icon: 'logos:strapi-icon', url: 'https://strapi.io/' },
-      { name: 'WordPress', icon: 'logos:wordpress-icon', url: 'https://wordpress.com/' },
+      { name: 'bun', icon: 'logos:bun', url: 'https://bun.sh/'},
     ]
   },
   {
@@ -57,11 +70,12 @@ export const skillGroups = [
     skills: [
       { name: 'Vercel', icon: 'logos:vercel-icon', url: 'https://vercel.com/' },
       { name: 'Bash', icon: 'logos:bash-icon', url: 'https://www.gnu.org/software/bash/' },
+      { name: 'Docker', icon: 'logos:docker-icon', url: 'https://www.docker.com/' },
       { name: 'Lighthouse', icon: 'logos:lighthouse', url: 'https://developers.google.com/web/tools/lighthouse' },
     ]
   },
   {
-    name: 'Design et outils graphiques',
+    name: 'Design et UI/UX',
     skills: [
       { name: 'Figma', icon: 'logos:figma', url: 'https://www.figma.com/' },
       { name: 'Adobe Photoshop', icon: 'logos:adobe-photoshop', url: 'https://www.adobe.com/products/photoshop.html' },
@@ -69,4 +83,3 @@ export const skillGroups = [
     ]
   },
 ]
-
