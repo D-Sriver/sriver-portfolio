@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio de Sébastien Duez
 
-## Getting Started
+Portfolio personnel présentant mes compétences en développement front-end React et en design graphique.
 
-First, run the development server:
+## 🚀 Aperçu
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Ce portfolio a été créé avec Next.js et présente mes projets, compétences et expériences professionnelles dans une interface interactive et moderne avec des animations fluides.
+
+![Capture d'écran du portfolio](https://example.com/screenshot.png)
+
+## 💻 Technologies utilisées
+
+- **Framework** : [Next.js](https://nextjs.org/)
+- **Langage** : [TypeScript](https://www.typescriptlang.org/)
+- **Styles** : [Tailwind CSS](https://tailwindcss.com/)
+- **Animations** : [Framer Motion](https://www.framer.com/motion/)
+- **Icônes** : [Iconify](https://iconify.design/)
+- **Déploiement** : [Vercel](https://vercel.com/)
+
+## 🛠️ Installation et utilisation
+
+### Prérequis
+
+- Node.js (v16 ou plus récent)
+- npm, yarn, pnpm ou bun
+
+### Installation
+
+1. Cloner le dépôt
+   ```bash
+   git clone https://github.com/D-Sriver/sriver-portfolio.git
+   cd sriver-portfolio
+   ```
+
+2. Installer les dépendances
+   ```bash
+   npm install
+   # ou
+   yarn install
+   # ou
+   pnpm install
+   # ou
+   bun install
+   ```
+
+3. Lancer le serveur de développement
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   # ou
+   pnpm dev
+   # ou
+   bun dev
+   ```
+
+4. Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur
+
+## 📱 Fonctionnalités
+
+- **Design responsive** : Adaptation parfaite sur tous les appareils
+- **Animations fluides** : Transitions et effets visuels avec Framer Motion
+- **Mode sombre** : Interface adaptée pour le confort visuel
+- **Fond animé** : Animation d'étoiles en arrière-plan
+- **Sections interactives** :
+  - À propos de moi
+  - Compétences et technologies
+  - Expérience professionnelle
+  - Projets
+- **Affichage des compétences** : Organisées par catégories avec icônes et liens
+
+## 🏗️ Structure du projet
+
+```
+├── src/
+│   ├── app/            # Routes et layouts Next.js
+│   │   └── utils/      # Données et utilitaires
+│   ├── components/     # Composants React
+│   └── styles/         # Styles globaux
+├── public/             # Fichiers statiques
+└── pages/              # Pages (configuration Next.js)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Déploiement
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Ce projet est configuré pour un déploiement facile sur Vercel :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+# ou
+yarn build
+# ou
+pnpm build
+# ou
+bun build
+```
 
-## Learn More
+## 📝 License
 
-To learn more about Next.js, take a look at the following resources:
+[MIT](LICENSE)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📞 Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [GitHub](https://github.com/D-Sriver)
+- [LinkedIn](https://www.linkedin.com/in/sebastien-duez/)
+- [Email](mailto:duez.s@ik.me)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Créé par Sébastien Duez
