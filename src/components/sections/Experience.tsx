@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { experiences } from '../app/utils/experiences';
+import { experiences } from '../../lib/experiences';
 
 export const Experience: React.FC = () => (
   <>

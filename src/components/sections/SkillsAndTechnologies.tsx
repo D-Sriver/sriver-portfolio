@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { skillGroups } from '../app/utils/skill';
+import { skillGroups } from '../../lib/skill';
 
 export const SkillsAndTechnologies: React.FC = () => {
   const [activeGroup, setActiveGroup] = useState(skillGroups[0].name);

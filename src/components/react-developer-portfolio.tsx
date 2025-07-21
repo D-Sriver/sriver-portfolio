@@ -3,19 +3,21 @@
 import { Icon } from '@iconify/react'; // Assurez-vous d'avoir installé @iconify/react
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { AboutMe } from './AboutMe';
-import { AnimatedBackground } from './AnimatedBackground';
-import { Experience } from './Experience';
+import { AboutMe } from './sections/AboutMe';
+import { AnimatedBackground } from './ui/AnimatedBackground';
+import { Contact } from './sections/Contact';
+import { Experience } from './sections/Experience';
 import { Footer } from './Footer';
 import { Header } from './Header';
-import { Projects } from './Projects';
-import { SkillsAndTechnologies } from './SkillsAndTechnologies';
+import { Projects } from './sections/Projects';
+import { SkillsAndTechnologies } from './sections/SkillsAndTechnologies';
 
 const sections = [
   { key: 'aPropos', label: 'À propos' },
   { key: 'competences', label: 'Compétences' },
   { key: 'experience', label: 'Expérience' },
-  { key: 'projets', label: 'Projets' }
+  { key: 'projets', label: 'Projets' },
+  { key: 'contact', label: 'Contact' }
 ] as const;
 type Section = typeof sections[number]['key'];
 
@@ -85,7 +87,7 @@ export function ReactDeveloperPortfolioComponent() {
         </AnimatePresence>
 
         {/* Navigation pour desktop */}
-        <nav className="my-8 sm:my-12 relative hidden md:block" ref={navRef}>
+        <nav className="my-1 sm:my-4 relative hidden md:block" ref={navRef}>
           <div className="flex justify-around items-center rounded-full p-1">
             {sections.map(({ key, label }) => (
               <button
@@ -101,7 +103,7 @@ export function ReactDeveloperPortfolioComponent() {
                 <div className="absolute inset-0 bg-linear-to-r from-transparent via-gold-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out transform -skew-x-12 group-hover:animate-golden-shine-once" />
                 
                 <span className={`relative z-10 ${
-                  activeSection === key ? 'text-gray-900' : 'text-gray-300 group-hover:text-white'
+                  activeSection === key ? 'text-gray-900 font-bold' : 'text-gray-300 group-hover:text-white'
                 }`}>
                   {label}
                 </span>
@@ -139,6 +141,7 @@ export function ReactDeveloperPortfolioComponent() {
             {activeSection === 'competences' && <SkillsAndTechnologies />}
             {activeSection === 'experience' && <Experience />}
             {activeSection === 'projets' && <Projects />}
+            {activeSection === 'contact' && <Contact />}
           </motion.div>
         </main>
       </div>

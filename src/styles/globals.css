@@ -13,6 +13,12 @@
   --color-gold-800: #a87e49;
   --color-gold-900: #936c3e;
 
+  /* Variables pour les thèmes */
+  --color-background: #0a0a0a;
+  --color-surface: #1a1a1a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0a0;
+
   --animate-shine: shine 1s;
   --animate-golden-shine: golden-shine 2s ease-in-out infinite;
   --animate-golden-shine-once: golden-shine-once 1.5s ease-in-out forwards;
@@ -74,6 +80,22 @@
       opacity: 0.3;
     }
   }
+}
+
+/* Thème clair */
+.light {
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666666;
+}
+
+/* Thème sombre (par défaut) */
+.dark {
+  --color-background: #0a0a0a;
+  --color-surface: #1a1a1a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0a0;
 }
 
 /*

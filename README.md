@@ -6,68 +6,34 @@ Portfolio personnel présentant mes compétences en développement front-end Rea
 
 Ce portfolio a été créé avec Next.js et présente mes projets, compétences et expériences professionnelles dans une interface interactive et moderne avec des animations fluides.
 
-![Capture d'écran du portfolio](https://example.com/screenshot.png)
+[![Vercel](https://vercel.com/button)](https://sriver-portfolio.vercel.app)
 
 ## 💻 Technologies utilisées
 
-- **Framework** : [Next.js](https://nextjs.org/)
+- **Framework** : [Next.js 14](https://nextjs.org/) avec App Router
 - **Langage** : [TypeScript](https://www.typescriptlang.org/)
-- **Styles** : [Tailwind CSS](https://tailwindcss.com/)
+- **Styles** : [Tailwind CSS 4](https://tailwindcss.com/)
 - **Animations** : [Framer Motion](https://www.framer.com/motion/)
 - **Icônes** : [Iconify](https://iconify.design/)
+- **Optimisation d'images** : Next.js Image
+- **SEO** : Métadonnées optimisées, sitemap, robots.txt
 - **Déploiement** : [Vercel](https://vercel.com/)
 
-## 🛠️ Installation et utilisation
-
-### Prérequis
-
-- Node.js (v16 ou plus récent)
-- npm, yarn, pnpm ou bun
-
-### Installation
-
-1. Cloner le dépôt
-   ```bash
-   git clone https://github.com/D-Sriver/sriver-portfolio.git
-   cd sriver-portfolio
-   ```
-
-2. Installer les dépendances
-   ```bash
-   npm install
-   # ou
-   yarn install
-   # ou
-   pnpm install
-   # ou
-   bun install
-   ```
-
-3. Lancer le serveur de développement
-   ```bash
-   npm run dev
-   # ou
-   yarn dev
-   # ou
-   pnpm dev
-   # ou
-   bun dev
-   ```
-
-4. Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur
-
-## 📱 Fonctionnalités
+## ✨ Fonctionnalités
 
 - **Design responsive** : Adaptation parfaite sur tous les appareils
 - **Animations fluides** : Transitions et effets visuels avec Framer Motion
-- **Mode sombre** : Interface adaptée pour le confort visuel
+- **Thème clair/sombre** : Basculer entre les modes avec persistance
 - **Fond animé** : Animation d'étoiles en arrière-plan
 - **Sections interactives** :
   - À propos de moi
-  - Compétences et technologies
+  - Compétences et technologies (organisées par catégories)
   - Expérience professionnelle
-  - Projets
-- **Affichage des compétences** : Organisées par catégories avec icônes et liens
+  - Projets (avec filtres par catégorie et projets mis en avant)
+  - Contact avec formulaire fonctionnel
+- **SEO optimisé** : Métadonnées complètes, Open Graph, Twitter Cards
+- **Performance** : Images optimisées, lazy loading
+- **Accessibilité** : Labels ARIA, navigation au clavier
 
 ## 🏗️ Structure du projet
 

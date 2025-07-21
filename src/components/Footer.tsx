@@ -1,4 +1,4 @@
-import { GlassmorphicCard } from './GlassmorphicCard';
+import { GlassmorphicCard } from './ui/GlassmorphicCard';
 
 export const Footer: React.FC = () => (
   <footer className="mt-auto">
