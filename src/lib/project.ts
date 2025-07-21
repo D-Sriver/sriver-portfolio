@@ -51,7 +51,7 @@ export const projects: Project[] = [
     category: 'application',
     featured: true,
     validated: true,
-    image: '/images/projects/jobFinder.png'
+    image: '/images/projects/JobFinder.png'
   },
   { 
     title: 'ReactCreator - Générateur d\'applications React', 
