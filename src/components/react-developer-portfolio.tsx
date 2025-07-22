@@ -55,10 +55,10 @@ export function ReactDeveloperPortfolioComponent() {
           <motion.button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="p-2 rounded-lg bg-gold-600/20 text-gold-400 hover:bg-gold-600/30 transition-colors duration-300"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.3 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Icon icon={isMobileMenuOpen ? "mdi:close" : "mdi:menu"} width="24" height="24" />
+            <Icon icon={isMobileMenuOpen ? "mdi:close" : "mdi:menu"} width="38" height="38" />
           </motion.button>
         </div>
         <AnimatePresence>
@@ -68,7 +68,7 @@ export function ReactDeveloperPortfolioComponent() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="fixed top-4 right-4 left-4 bg-gray-800/40 border border-gold-600/50 backdrop-blur-md rounded-md shadow-lg overflow-hidden z-40"
+              className="fixed top-4 right-4 left-4 bg-gray-800/40 border border-gold-600/50 backdrop-blur-md rounded-md shadow-lg overflow-hidden z-40 gap-4"
             >
               {sections.map(({ key, label }) => (
                 <motion.button
@@ -77,7 +77,7 @@ export function ReactDeveloperPortfolioComponent() {
                     setActiveSection(key);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="block w-full text-left px-4 py-3 hover:bg-gold-700/30 transition-colors duration-200 hover:transition-all "
+                  className="block w-full text-left font-bold px-8 py-6 hover:bg-gold-700/30 transition-colors duration-200 hover:transition-all "
                 >
                   {label}
                 </motion.button>

@@ -1,4 +1,11 @@
 export const experiences = [
+    {
+    company: 'Irène Grandadam',
+    position: 'Développeur Web Freelance',
+    period: '2024 - 2025', 
+    description: 'Développement sur mesure d\'une plateforme e-learning pour Irène Grandadam, spécialisée dans l\'accompagnement professionnel. Création d\'un système complet de gestion et vente de formations avec interface moderne.',
+    technologies: ['React', 'TypeScript', 'Framer Motion', 'Supabase']
+  },
   {
     company: 'Le jeu facétieux',
     position: 'Stage développeur web',

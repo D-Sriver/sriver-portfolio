@@ -9,12 +9,12 @@ export const SkillsAndTechnologies: React.FC = () => {
   return (
     <div className="space-y-4 sm:space-y-6">
       <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4 text-primary">Compétences et Technologies</h2>
-      <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
+      <div className="flex flex-wrap gap-2 mb-1 sm:mb-3 p-2">
         {skillGroups.map((group) => (
           <button
             key={group.name}
             onClick={() => setActiveGroup(group.name)}
-            className={`px-2 py-1 sm:px-3 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-colors ${
+            className={`px-3 py-3 sm:px-3 sm:py-2 rounded-full text-sm sm:text-sm font-medium transition-colors ${
               activeGroup === group.name
                 ? 'border border-gold-500/50 text-gray-300 bg-gold-500/10'
                 : 'border border-gold-800/40 text-gray-300 hover:bg-gold-500/10 hover:border-gold-600/50'

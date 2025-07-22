@@ -62,8 +62,8 @@ export const Projects: React.FC = () => {
                         </span>
                       )}
                       {project.abandoned && (
-                        <span className="text-xs px-2 py-1 bg-red-600/20 text-red-400 rounded-full">
-                          Abandonné
+                        <span className="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded-full">
+                          Gelé
                         </span>
                       )}
                     </div>
@@ -170,8 +170,8 @@ export const Projects: React.FC = () => {
                     </span>
                   )}
                   {project.abandoned && (
-                    <span className="text-xs px-2 py-1 bg-red-600/20 text-red-400 rounded-full">
-                      Abandonné
+                    <span className="text-xs px-2 py-1 bg-blue-600/20 text-blue-400 rounded-full">
+                      Gelé
                     </span>
                   )}
                 </div>
